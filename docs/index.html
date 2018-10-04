@@ -4,12 +4,12 @@
 
 <style>
 body  {
-    //background-image: url("https://78.media.tumblr.com/fd5267ff1121b0d3eb331a2bf831f0de/tumblr_meols6ozIo1qg39ewo1_500.gif");
-    background-color: #ffffff;
-	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background-image: url("https://i.imgur.com/KjsOgKb.jpg");
+    background-color: #222d43;
+	-webkit-background-size: repeat;
+  -moz-background-size: repeat;
+  -o-background-size: repeat;
+  background-size: repeat;
 }
 
 .button {
@@ -26,33 +26,36 @@ body  {
     text-decoration: none;
     font-size: 16px;
 	border-radius: 15px;
-	box-shadow: 0 9px #D5FFDF;
+	box-shadow: 0 9px #c6a73e;
 	
 } 
 .button1 {
-    background-color: white; 
-    color: #4CAF50; 
-    border: 6px solid #4CAF50;
+    background-color: #ffd957; 
+    color: #565e42; 
+    border: 6px solid #e3bf44;
 	font-family: Lucida Console, Lucida Console, Monospace;
 }
 
 .button:hover {
-    background-color: #4CAF50; /* Green */
-    color: white;
+    background-color: #ffe897; /* Green */
+    color: #3c4a3a;
+	border: 6px solid #ffeeb5;
+	box-shadow: 0 9px #e0c361;
 }
 .button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #ADF0BD;
+  background-color: #FFFFFF;
+  color: #c6a73e;
+  box-shadow: 0 6px #c6a73e;
   transform: translateY(7px);
   
 }
 
    h1 {
-     color: FireBrick;
+     color: #c6a73e;
    }
    p { 
    font-family: Lucida Console, Courier New, Monospace;
-     color: #4CAF50; 
+     color: #c6a73e; 
 	 margin: auto;
     width: 50%;
 	height: 50%
@@ -72,19 +75,25 @@ p.sansserif {
  </style> 
 
 <head>
-
+<link rel="stylesheet" type="text/css" href="interface.css" />
 
 
 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
 
-<center>
+
 <title>Space Station Manager</title><p class="sansserif">
-<h3><p class="sansserif"><button class="button button1" onclick="hackClick(1)">Hack</button> <br><br><br><br> Money: <span id="money">0</span></h3>
-<h3><p class="sansserif">Hacker Earnings</h3>
-<p class="sansserif">Beginner: <span id="beginner">0</span>
-<button class="button button1" onclick="buyBeginner()">Buy Beginner</button> Cost: <span id="beginnerCost">10</span></h3>
+<h3><p class="sansserif"><button class="button button1" onclick="hackClick(1)">Trade</button> <br><br><br><br> ALZ: <span id="money">0</span></h3>
+<h3><p class="sansserif"><u>Station Earnings:</u></h3>
+<p class="sansserif">Merchants: <span id="beginner">0</span>
+<button class="button button1" onclick="buyBeginner()">Hire merchant</button> Cost: <span id="beginnerCost">10</span></h3>
+<br>
+<p class="sansserif">Merchants: <span id="beginner2">0</span>
+<button class="button button1" onclick="buyBeginner2()">Buy Hauler TS1</button> Cost: <span id="beginnerCost2">10</span></h3><br><br><br><br>
+<button class="button button1" onclick="save()">Save</button> 
+<button class="button button1" onclick="load()">Load</button> 
+<button class="button button1" onclick="deleteAndReset()">Reset</button> 
 
 
 </head>
@@ -92,41 +101,15 @@ p.sansserif {
 
 <script>
 
-var money = 0;
 
 
-function hackClick(number){
-money = money + number;
-document.getElementById("money").innerHTML = money;
-
-};
-
-var beginner = 0;
-
-function buyBeginner(){
-var beginnerCost = Math.floor(10 * Math.pow(3.2, beginner));
-if(money >= beginnerCost){
-
-beginner = beginner + 0.1;
-money = money - beginnerCost;
-document.getElementById('beginner').innerHTML = beginner;
-document.getElementById('money').innerHTML = money;
-};
-var nextCost = Math.floor(10 * Math.pow(3.2,beginner));
-document.getElementById('beginnerCost').innerHTML = nextCost;
-
-};
-
-window.setInterval(function(){
-hackClick(beginner);
-
-}, 1000);
 </script>
+
+<script type="text/javascript" src="main.js"></script>
 <script src='decimal.js'></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
 
 </body>
 </html>
