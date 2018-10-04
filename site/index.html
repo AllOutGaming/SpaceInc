@@ -4,8 +4,8 @@
 
 <style>
 body  {
-    //background-image: url("https://78.media.tumblr.com/fd5267ff1121b0d3eb331a2bf831f0de/tumblr_meols6ozIo1qg39ewo1_500.gif");
-    background-color: #ffffff;
+    //background-image: url("https://blog.flixel.com/wp-content/uploads/2016/04/spacecinemagraph.gif");
+    background-color: #000;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -79,12 +79,16 @@ p.sansserif {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
 
-<center>
+
 <title>Space Station Manager</title><p class="sansserif">
 <h3><p class="sansserif"><button class="button button1" onclick="hackClick(1)">Hack</button> <br><br><br><br> Money: <span id="money">0</span></h3>
 <h3><p class="sansserif">Hacker Earnings</h3>
-<p class="sansserif">Beginner: <span id="beginner">0</span>
+<p class="sansserif">Beginner: <span id="beginnerLvl">0</span>
 <button class="button button1" onclick="buyBeginner()">Buy Beginner</button> Cost: <span id="beginnerCost">10</span></h3>
+<br><br><br><br>
+<button class="button button1" onclick="save()">Save</button> 
+<button class="button button1" onclick="load()">Load</button> 
+<button class="button button1" onclick="deleteAndReset()">Reset</button> 
 
 
 </head>
@@ -95,12 +99,13 @@ p.sansserif {
 
 
 </script>
+
+<script type="text/javascript" src="main.js"></script>
 <script src='decimal.js'></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
 
