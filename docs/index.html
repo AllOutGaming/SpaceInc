@@ -34,6 +34,30 @@ body  {
     color: #565e42; 
     border: 6px solid #e3bf44;
 	font-family: Lucida Console, Lucida Console, Monospace;
+	width: 250px;
+}
+
+.button1.disabled, .button1[disabled] {
+    cursor: default;
+    background-image: none;
+    opacity: 0.45;
+    filter: alpha(opacity=45);
+    
+}
+
+.button2 {
+    background-color: #ffd957; 
+    color: #565e42; 
+    border: 6px solid #e3bf44;
+	font-family: Lucida Console, Lucida Console, Monospace;
+	width: 250px;
+}
+.button2.disabled, .button2[disabled] {
+    cursor: default;
+    background-image: none;
+    opacity: 0.45;
+    filter: alpha(opacity=45);
+    
 }
 
 .button:hover {
@@ -57,12 +81,26 @@ body  {
    font-family: Lucida Console, Courier New, Monospace;
      color: #c6a73e; 
 	 margin: auto;
-    width: 50%;
-	height: 50%
+    width: 100%;
+	height: 100%;
     border: 0px solid green;
     padding: 10px;
 	
    } 
+   h2{
+   font-family: Lucida Console, Courier New, Monospace;
+     color: #c6a73e; 
+	 margin: auto;
+    width: 100%;
+	height: 100%;
+	
+    border: 0px solid green;
+    padding: 10px;
+   }
+   h4{
+   line-height: 2em;
+   
+   }
    
 p.serif {
     font-family: "Lucida Console", Times, Monospace;
@@ -71,7 +109,60 @@ p.serif {
 p.sansserif {
     font-family: Lucida Console, Lucida Console, Monospace;
 }
-   
+p.ex1 {
+    margin: 35px 70px 50px 90px;
+
+}
+
+h2.serif {
+    font-family: "Lucida Console", Times, Monospace;
+}
+
+h2.sansserif {
+    font-family: Lucida Console, Lucida Console, Monospace;
+}
+
+
+
+
+
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #222d43;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: #222d43;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
  </style> 
 
 <head>
@@ -83,18 +174,31 @@ p.sansserif {
 	
 
 
-<title>Space Station Manager</title><p class="sansserif">
-<h3><p class="sansserif"><button class="button button1" onclick="hackClick(1)">Trade</button> <br><br><br><br> ALZ: <span id="money">0</span></h3>
+<title>Space Station Manager</title>
+
+
+<h3><h2 class="sansserif"><font size = 36>Space Station Manager</font><br><br><br><button class="button button1" onclick="hackClick(1)" id="btnT">Trade</button> <br><br><br><br> ALZ: <span id="money">0</span></h3>
+
+
+
+<div class="split right">
 <h3><p class="sansserif"><u>Station Earnings:</u></h3>
-<p class="sansserif">Merchants: <span id="beginner">0</span>
-<button class="button button1" onclick="buyBeginner()">Hire merchant</button> Cost: <span id="beginnerCost">10</span></h3>
-<br>
-<p class="sansserif">Merchants: <span id="beginner2">0</span>
-<button class="button button1" onclick="buyBeginner2()">Buy Hauler TS1</button> Cost: <span id="beginnerCost2">10</span></h3><br><br><br><br>
+<p class="sansserif">
+
+ | <button class="button button1" onclick="buyBeginner()"  id="btn1">Hire Merchant</button> | <font size= 18><sub> <span id="beginner">0</span></font></sub> | Cost: <span id="beginnerCost">10</span> ALZ | </h3>
+<br><br><br>
+
+ | <button class="button button2" onclick="buyBeginner2()"  id="btn2">Buy Hauler TS1</button> | <font size= 18><sub> <span id="beginner2">0</span></font></sub> | Cost: <span id="beginnerCost2">100</span> ALZ | </h3>
+<br><br><br>
+
+</h2>
+</div>
+
+<h2 class="sansserif">
 <button class="button button1" onclick="save()">Save</button> 
 <button class="button button1" onclick="load()">Load</button> 
 <button class="button button1" onclick="deleteAndReset()">Reset</button> 
-
+</h2>
 
 </head>
 <body>
