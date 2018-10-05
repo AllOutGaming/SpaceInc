@@ -12,7 +12,7 @@ var beginner2 = 0;
 var beginnerLvl = 0;
 
 function buyBeginner(){
-var beginnerCost = Math.floor(10 * (Math.pow(1.01,beginner * 100)));
+var beginnerCost = Math.floor(10 * (Math.pow(1.1,beginner * 100)));
 if(money >= beginnerCost){
 	
 	
@@ -28,13 +28,13 @@ document.getElementById("beginner").innerHTML = prettify(beginner * 100);
 //document.getElementById("beginnerLvl").innerHTML = beginnerLvl;
 document.getElementById("money").innerHTML = prettify(money);
 };
-var nextCost = Math.floor(10 * (Math.pow(1.01, beginner * 100)));
+var nextCost = Math.floor(10 * (Math.pow(1.1, beginner * 100)));
 document.getElementById("beginnerCost").innerHTML = nextCost;
 
 };
 
 function buyBeginner2(){
-var beginnerCost2 = Math.floor(100 * (Math.pow(1.01,beginner2 * 10)));
+var beginnerCost2 = Math.floor(100 * (Math.pow(1.1,beginner2 * 10)));
 if(money >= beginnerCost2){
 	
 	
@@ -46,7 +46,7 @@ document.getElementById("beginner2").innerHTML = prettify(beginner2 * 10);
 //document.getElementById("beginnerLvl").innerHTML = beginnerLvl;
 document.getElementById("money").innerHTML = prettify(money);
 };
-var nextCost2 = Math.floor(100 * (Math.pow(1.01, beginner2 * 10)));
+var nextCost2 = Math.floor(100 * (Math.pow(1.1, beginner2 * 10)));
 document.getElementById("beginnerCost2").innerHTML = nextCost2;
 
 };
