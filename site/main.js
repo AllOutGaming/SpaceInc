@@ -34,19 +34,19 @@ document.getElementById("beginnerCost").innerHTML = nextCost;
 };
 
 function buyBeginner2(){
-var beginnerCost2 = Math.floor(100 * (Math.pow(1.123,beginner2 * 10)));
+var beginnerCost2 = Math.floor( 52.0 * 100 * (Math.pow(1.123,beginner2 * 1)));
 if(money >= beginnerCost2){
 	
 	
 	
-beginner2 = beginner2 + 0.1;
+beginner2 = beginner2 + 1;
 //beginnerLvl = beginnerLvl +0.1;
 money = money - beginnerCost2;
-document.getElementById("beginner2").innerHTML = prettify(beginner2 * 10);
+document.getElementById("beginner2").innerHTML = prettify(beginner2 * 1);
 //document.getElementById("beginnerLvl").innerHTML = beginnerLvl;
 document.getElementById("money").innerHTML = prettify(money);
 };
-var nextCost2 = Math.floor(100 * (Math.pow(1.123, beginner2 * 10)));
+var nextCost2 = Math.floor( 52.0 * 100 * (Math.pow(1.123, beginner2 * 1)));
 document.getElementById("beginnerCost2").innerHTML = nextCost2;
 
 };
