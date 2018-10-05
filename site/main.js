@@ -12,33 +12,41 @@ var beginner2 = 0;
 var beginnerLvl = 0;
 
 function buyBeginner(){
-var beginnerCost = Math.floor(10 * (Math.pow(1.4,beginner)));
+var beginnerCost = Math.floor(10 * (Math.pow(1.01,beginner)));
 if(money >= beginnerCost){
-
-beginner = beginner + 1;
-//beginnerLvl = beginnerLvl +0.1;
+	
+	
+	
+	
+	
+	
+	
+beginner = beginner + 0.01;
+//beginnerLvl = beginner * 10;
 money = money - beginnerCost;
-document.getElementById("beginner").innerHTML = beginner;
+document.getElementById("beginner").innerHTML = prettify(beginner * 100);
 //document.getElementById("beginnerLvl").innerHTML = beginnerLvl;
 document.getElementById("money").innerHTML = prettify(money);
 };
-var nextCost = Math.floor(10 * (Math.pow(1.4, beginner)));
+var nextCost = Math.floor(10 * (Math.pow(1.01, beginner * 100)));
 document.getElementById("beginnerCost").innerHTML = nextCost;
 
 };
 
 function buyBeginner2(){
-var beginnerCost2 = Math.floor(10 * (Math.pow(1.4,beginner2)));
+var beginnerCost2 = Math.floor(100 * (Math.pow(1.01,beginner2));
 if(money >= beginnerCost2){
-
-beginner2 = beginner2 + 1;
+	
+	
+	
+beginner2 = beginner2 + 0.1;
 //beginnerLvl = beginnerLvl +0.1;
 money = money - beginnerCost2;
-document.getElementById("beginner2").innerHTML = beginner2;
+document.getElementById("beginner2").innerHTML = prettify(beginner2 * 100);
 //document.getElementById("beginnerLvl").innerHTML = beginnerLvl;
 document.getElementById("money").innerHTML = prettify(money);
 };
-var nextCost2 = Math.floor(10 * (Math.pow(1.4, beginner2)));
+var nextCost2 = Math.floor(10 * (Math.pow(1.01, beginner2)));
 document.getElementById("beginnerCost2").innerHTML = nextCost2;
 
 };
@@ -46,6 +54,12 @@ document.getElementById("beginnerCost2").innerHTML = nextCost2;
 window.setInterval(function(){
 hackClick(beginner);
 hackClick(beginner2);
+if(money >= beginnerCost){
+	$('#btn1').css({
+        'disabled': 'false'
+    });
+}
+	
 }, 50);
 
 var prestige = 0;
